@@ -1,0 +1,60 @@
+# ===== 網路設定參數 =====
+$InterfaceName = "乙太網路2"
+$IPv6Address   = "2001:288:6004:17:2025:1b::13"
+$PrefixLength  = 64
+$Gateway       = "2001:288:6004:17::254"
+$DNS           = "2001:b000:168::1"
+$Proxy         = "p4.cycu.org:3128"
+# ========================
+
+Write-Host "✅ 開始設定網路介面：$InterfaceName" -ForegroundColor Cyan
+
+# 1) 關閉 IPv4
+try {
+    Disable-NetAdapterBinding -Name $InterfaceName -ComponentID "ms_tcpip" -ErrorAction Stop
+    Write-Host "✅ 已關閉 IPv4"
+} catch {
+    Write-Warning "⚠️ 關閉 IPv4 失敗：" + $_.Exception.Message
+}
+
+# 2) 啟用 IPv6
+try {
+    Enable-NetAdapterBinding -Name $InterfaceName -ComponentID "ms_tcpip6" -ErrorAction Stop
+    Write-Host "✅ 已啟用 IPv6"
+} catch {
+    Write-Warning "⚠️ 啟用 IPv6 失敗：" + $_.Exception.Message
+}
+
+# 3) 移除現有 IPv6 位址（排除 ::1）
+Get-NetIPAddress -InterfaceAlias $InterfaceName -AddressFamily IPv6 |
+    Where-Object { $_.IPAddress -ne "::1" } |
+    Remove-NetIPAddress -Confirm:$false -ErrorAction SilentlyContinue
+
+# 4) 設定新的 IPv6 位址與預設閘道
+try {
+    New-NetIPAddress -InterfaceAlias $InterfaceName -IPAddress $IPv6Address -PrefixLength $PrefixLength -AddressFamily IPv6 -DefaultGateway $Gateway -ErrorAction Stop
+    Write-Host "✅ 已設定 IPv6 與閘道"
+} catch {
+    Write-Warning "⚠️ 設定 IPv6 失敗：" + $_.Exception.Message
+}
+
+# 5) 設定 DNS
+try {
+    Set-DnsClientServerAddress -InterfaceAlias $InterfaceName -ServerAddresses $DNS -ErrorAction Stop
+    Write-Host "✅ DNS 已設定為 $DNS"
+} catch {
+    Write-Warning "⚠️ 設定 DNS 失敗：" + $_.Exception.Message
+}
+
+# 6) 設定 WinHTTP Proxy
+Write-Host "✅ 設定 WinHTTP Proxy 為：$Proxy"
+netsh winhttp set proxy $Proxy
+
+# 7) 設定使用者層級 IE/系統 Proxy
+Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Internet Settings" -Name ProxyEnable -Value 1
+Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Internet Settings" -Name ProxyServer -Value $Proxy
+Set-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Internet Settings" -Name ProxyOverride -Value "<local>"
+Write-Host "✅ 使用者 Proxy 已設定"
+
+Write-Host "`n✅ 所有設定已完成！" -ForegroundColor Green
+pause
