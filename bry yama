@@ -1,0 +1,37 @@
+import brython_robot as robot
+from browser import timer
+w = robot.World(10, 10)
+r = robot.AnimatedRobot(w, 1, 1)
+def yama():
+    r.move(2)
+    r.turn_left()
+    r.turn_left()
+    r.move(2)
+    r.turn_left()
+    r.move(2)
+    r.turn_left()
+    r.move(3)
+    r.turn_left()
+    r.turn_left()
+    r.move(3)
+    r.turn_left()
+    r.move(2)
+    r.turn_left()
+    r.move(2)
+def ret():
+    r.turn_left()
+    r.turn_left()
+    r.move(2)
+    r.turn_left()
+    r.turn_left()
+    r.turn_left()
+    r.move(4)
+    r.turn_left()
+    r.turn_left()
+    r.turn_left()
+    
+    
+r.turn_left()    
+for i in range(5):
+    yama()
+    ret()
