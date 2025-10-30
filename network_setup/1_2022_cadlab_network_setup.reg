@@ -1,0 +1,11 @@
+Windows Registry Editor Version 5.00
+ 
+ [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings]
+ ; disable AutoDetect
+"AutoDetect"=dword:00000000
+"MigrateProxy"=dword:00000001
+; enable Proxy
+"ProxyEnable"=dword:00000001 
+"ProxyHttp1.1"=dword:00000000 
+"ProxyServer"="http://[2001:288:6004:17::4]:3128"
+"ProxyOverride"="localhost;192.168.1.0/24;cycu.org;<local>"
