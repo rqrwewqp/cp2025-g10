@@ -1,0 +1,13 @@
+[http]
+	proxy = http://p4.cycu.org:3128
+    
+[safe] 
+    directory = *
+    
+[http "https://github.com"]
+    sslVerify = false
+[user]
+	email = 41423210@nfu.edu.tw
+	name = rqrwewqp
+[pull]
+	rebase = false
