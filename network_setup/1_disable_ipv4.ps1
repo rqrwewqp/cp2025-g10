@@ -1,8 +1,8 @@
 # 關閉 IPv4 網路
-Disable-NetAdapterBinding -Name "*" -ComponentID ms_tcpip
+Disable-NetAdapterBinding -Name "乙太網路 2" -ComponentID ms_tcpip
   
 # 啟用 IPv6 網路
-Enable-NetAdapterBinding -Name "*" -ComponentID ms_tcpip6
+Enable-NetAdapterBinding -Name "乙太網路 2" -ComponentID ms_tcpip6
   
 # 設置 IPv6 網路中的 mde DNS 伺服器 (設計系)
 $dnsServers = "2001:288:6004:17::3"
@@ -11,7 +11,7 @@ Set-DnsClientServerAddress -InterfaceAlias "*" -ServerAddresses $dnsServers
 
 # 設定 IPv6 固定位址 (fixed address), 子網路首碼長度 (subnet prefix) 與網路預設閘道 (gateway) 等三個變數
 # 以序號 100 為例
-$ipv6Address = "2001:288:6004:17:你的個人 IPv6 address"
+$ipv6Address = "2001:288:6004:17:2025:1a::13"
 $subnetPrefixLength = 64
 $gateway = "2001:288:6004:17::254"
  
@@ -26,4 +26,5 @@ $interfaces | ForEach{
  
 # 列出所使用的 IPv6 網路通訊協定內容
 Write-Host "IPv6 Address: $ipv6Address/$subnetPrefixLength"
+
 Write-Host "IPv6 Gateway: $gateway"
