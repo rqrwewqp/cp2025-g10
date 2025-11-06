@@ -1,8 +1,8 @@
 # 關閉 IPv4 網路
-Disable-NetAdapterBinding -Name "乙太網路 2" -ComponentID ms_tcpip
+Disable-NetAdapterBinding -Name "*" -ComponentID ms_tcpip
   
 # 啟用 IPv6 網路
-Enable-NetAdapterBinding -Name "乙太網路 2" -ComponentID ms_tcpip6
+Enable-NetAdapterBinding -Name "*" -ComponentID ms_tcpip6
   
 # 設置 IPv6 網路中的 mde DNS 伺服器 (設計系)
 $dnsServers = "2001:b000:168::1"
@@ -28,4 +28,5 @@ $interfaces | ForEach{
 Write-Host "IPv6 Address: $ipv6Address/$subnetPrefixLength"
 
 Write-Host "IPv6 Gateway: $gateway"
+
 
