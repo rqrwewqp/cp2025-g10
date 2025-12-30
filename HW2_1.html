@@ -1,0 +1,402 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>cp_41423210個人倉儲</title>
+        <meta charset="utf-8">
+<meta property="head" content="H2">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <!-- for Wink3 客製化關閉 -->
+        <!--
+        <link rel="stylesheet" type="text/css" href="./../cmsimde/static/winkPlayer.css" />
+        <script type="text/javascript" src="./../cmsimde/static/winkPlayer.js"></script>
+        -->
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDiff.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPowerShell.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushMojo.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushWbt.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushRust.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container">
+                <div class="row align-items-center">
+                <h1>cp 41423210 個人倉儲</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">cp demo</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <h1>w7</h1>
+<div id="brython_div1"></div>
+<!-- 導入 brython 程式庫 -->
+<p>
+<script src="./../cmsimde/static/brython.js"></script>
+<script src="./../cmsimde/static/brython_stdlib.js"></script>
+</p>
+<!-- 啟動 Brython -->
+<p>
+<script>
+window.onload=function(){
+brython({debug:1, pythonpath:['./../cmsimde/static/','./../downloads/py/']});
+}
+</script>
+<script type="text/python3">
+from browser import document, html, timer
+
+CELL_SIZE = 40
+WALL_THICKNESS = 6
+IMG_PATH = "https://mde.tw/cp2025/reeborg/src/images/"
+
+class World:
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
+        self.layers = self._create_layers()
+        self._init_html()
+        self._draw_grid()
+        self._draw_walls()
+    def _create_layers(self):
+        return {
+            "grid": html.CANVAS(width=self.width * CELL_SIZE, height=self.height * CELL_SIZE),
+            "walls": html.CANVAS(width=self.width * CELL_SIZE, height=self.height * CELL_SIZE),
+            "objects": html.CANVAS(width=self.width * CELL_SIZE, height=self.height * CELL_SIZE),
+            "robots": html.CANVAS(width=self.width * CELL_SIZE, height=self.height * CELL_SIZE),
+        }
+
+    def _init_html(self):
+        container = html.DIV(style={
+            "position": "relative",
+            "width": f"{self.width * CELL_SIZE}px",
+            "height": f"{self.height * CELL_SIZE}px"
+        })
+        for z, canvas in enumerate(self.layers.values()):
+            canvas.style = {
+                "position": "absolute",
+                "top": "0px",
+                "left": "0px",
+                "zIndex": str(z)
+            }
+            container <= canvas
+        document["brython_div1"].clear()
+        document["brython_div1"] <= container
+    def _draw_grid(self):
+        ctx = self.layers["grid"].getContext("2d")
+        ctx.strokeStyle = "#cccccc"
+        for i in range(self.width + 1):
+            ctx.beginPath()
+            ctx.moveTo(i * CELL_SIZE, 0)
+            ctx.lineTo(i * CELL_SIZE, self.height * CELL_SIZE)
+            ctx.stroke()
+        for j in range(self.height + 1):
+            ctx.beginPath()
+            ctx.moveTo(0, j * CELL_SIZE)
+            ctx.lineTo(self.width * CELL_SIZE, j * CELL_SIZE)
+            ctx.stroke()
+
+    def _draw_image(self, ctx, src, x, y, w, h, offset_x=0, offset_y=0):
+        img = html.IMG()
+        img.src = src
+        def onload(evt):
+            px = x * CELL_SIZE + offset_x
+            py = (self.height - 1 - y) * CELL_SIZE + offset_y
+            ctx.drawImage(img, px, py, w, h)
+        img.bind("load", onload)
+    def _draw_walls(self):
+        ctx = self.layers["walls"].getContext("2d")
+        for x in range(self.width):
+            # 北牆：最上方（貼在頂格子正上緣）
+            self._draw_image(ctx, IMG_PATH + "north.png", x, self.height - 1,
+                             CELL_SIZE, WALL_THICKNESS, offset_y=0)
+            # 南牆：最下方（貼在底格子正下緣）
+            self._draw_image(ctx, IMG_PATH + "north.png", x, 0,
+                             CELL_SIZE, WALL_THICKNESS, offset_y=CELL_SIZE - WALL_THICKNESS)
+        for y in range(self.height):
+            # 西牆：最左邊（貼格子內側左緣）
+            self._draw_image(ctx, IMG_PATH + "east.png", 0, y,
+                             WALL_THICKNESS, CELL_SIZE, offset_x=0)
+            # 東牆：最右邊（貼格子內側右緣）
+            self._draw_image(ctx, IMG_PATH + "east.png", self.width - 1, y,
+                             WALL_THICKNESS, CELL_SIZE, offset_x=CELL_SIZE - WALL_THICKNESS)
+
+    def robot(self, x, y):
+        ctx = self.layers["robots"].getContext("2d")
+        self._draw_image(ctx, IMG_PATH + "blue_robot_e.png", x - 1, y - 1,
+                         CELL_SIZE, CELL_SIZE)
+
+class AnimatedRobot:
+    def __init__(self, world, x, y):
+        self.world = world
+        self.x = x - 1
+        self.y = y - 1
+        self.facing = "E"
+        self.facing_order = ["E", "N", "W", "S"]
+        self.robot_ctx = world.layers["robots"].getContext("2d")
+        self.trace_ctx = world.layers["objects"].getContext("2d")
+        self.queue = []
+        self.running = False
+        self._draw_robot()
+
+    def _robot_image(self):
+        return {
+            "E": "blue_robot_e.png",
+            "N": "blue_robot_n.png",
+            "W": "blue_robot_w.png",
+            "S": "blue_robot_s.png"
+        }[self.facing]
+
+    def _draw_robot(self):
+        self.robot_ctx.clearRect(0, 0, self.world.width * CELL_SIZE, self.world.height * CELL_SIZE)
+        self.world._draw_image(self.robot_ctx, IMG_PATH + self._robot_image(),
+                               self.x, self.y, CELL_SIZE, CELL_SIZE)
+
+    def _draw_trace(self, from_x, from_y, to_x, to_y):
+        ctx = self.trace_ctx
+        ctx.strokeStyle = "#d33"
+        ctx.lineWidth = 2
+        ctx.beginPath()
+        fx = from_x * CELL_SIZE + CELL_SIZE / 2
+        fy = (self.world.height - 1 - from_y) * CELL_SIZE + CELL_SIZE / 2
+        tx = to_x * CELL_SIZE + CELL_SIZE / 2
+        ty = (self.world.height - 1 - to_y) * CELL_SIZE + CELL_SIZE / 2
+        ctx.moveTo(fx, fy)
+        ctx.lineTo(tx, ty)
+        ctx.stroke()
+
+    def move(self, steps):
+        def action(next_done):
+            def step():
+                nonlocal steps
+                if steps == 0:
+                    next_done()
+                    return
+                from_x, from_y = self.x, self.y
+                dx, dy = 0, 0
+                if self.facing == "E":
+                    dx = 1
+                elif self.facing == "W":
+                    dx = -1
+                elif self.facing == "N":
+                    dy = 1
+                elif self.facing == "S":
+                    dy = -1
+                next_x = self.x + dx
+                next_y = self.y + dy
+    
+                # ✅ 邊界檢查
+                if 0 <= next_x < self.world.width and 0 <= next_y < self.world.height:
+                    self.x, self.y = next_x, next_y
+                    self._draw_trace(from_x, from_y, self.x, self.y)
+                    self._draw_robot()
+                    steps -= 1
+                    timer.set_timeout(step, 200)
+                else:
+                    print("🚨 已經撞牆，停止移動！")
+                    next_done()
+            step()
+        self.queue.append(action)
+        self._run_queue()
+
+    def turn_left(self):
+        def action(done):
+            idx = self.facing_order.index(self.facing)
+            self.facing = self.facing_order[(idx + 1) % 4]
+            self._draw_robot()
+            timer.set_timeout(done, 300)
+        self.queue.append(action)
+        self._run_queue()
+
+    def _run_queue(self):
+        if self.running or not self.queue:
+            return
+        self.running = True
+        action = self.queue.pop(0)
+        action(lambda: self._done())
+
+    def _done(self):
+        self.running = False
+        self._run_queue()
+
+                         
+x=10
+y=12
+w = World(x, y)    # 建立 x*y 的世界
+w.robot(1, 1)        # 在 (1,1) 放置一台 robot
+
+r = AnimatedRobot(w, 1, 1)
+
+def turn_right():
+    r.turn_left()
+    r.turn_left()
+    r.turn_left()
+v=y//2
+for i in range(v):
+    r.move(x-1) 
+    r.turn_left()
+    r.move(1)
+    r.turn_left()
+    r.move(x-1)
+    turn_right()
+    r.move(1)
+    turn_right()
+if y/2 > y//2:
+    r.move(x-1)
+</script>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        
+<!-- 啟用 LaTeX equations 編輯 -->
+  <!-- <script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+    </body></html>
+        
