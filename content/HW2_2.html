@@ -326,7 +326,7 @@ class AnimatedRobot:
         self._run_queue()
 
                          
-a=10
+a=11
 b=10
 w = World(a, b)    # 建立 a*b 的世界
 w.robot(1, 1)        # 在 (1,1) 放置一台 robot
@@ -337,18 +337,21 @@ def turn_right():
     r.turn_left()
     r.turn_left()
     r.turn_left()
-v=b//2
+v=a//2
+
 for i in range(v):
-    r.move(a-1) 
     r.turn_left()
-    r.move(1)
-    r.turn_left()
-    r.move(a-1)
+    r.move(b-1) 
     turn_right()
     r.move(1)
     turn_right()
-if b/2 > b//2:
-    r.move(a-1)
+    r.move(b-1)
+    r.turn_left()
+    r.move(1)
+if a/2 > a//2:
+    r.turn_left()
+    r.move(b-1)
+
 </script>
         
     <!-- footer -->
